@@ -1,20 +1,22 @@
 const resetarJogo = document.querySelector('.reset');
 const btnSortear = document.querySelectorAll('.sortear');
 const estadoJogo = document.querySelector('.estadoJogo');
+const elementoSorteado = document.querySelector('.elementoSorteado');
 
 let numerosSorteados = [];
-
+let maxNumber = 118;
 const resetar = function() {
     const numeros = document.querySelectorAll('.numero');
     numeros.forEach(numero => numero.classList.remove('sorteado'));
     numerosSorteados = [];
     estadoJogo.textContent = 'Novo Jogo';
+    elementoSorteado.textContent = 'Bem vindo ao Bingo dos Elementos Químicos';
 };
 
 resetarJogo.addEventListener('click', resetar);
 
 const sortear = function() {
-    let numero = Math.floor(Math.random() * 119);
+let numero = generateUniqueNumber();
 
     if (numerosSorteados.includes(numero)) {
         return;
@@ -31,14 +33,150 @@ const sortear = function() {
         } else if ([5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120].includes(numero)) {
             letter = 'O';
         }
-        numerosSorteados.push(numero);
+        if (letter === undefined) {
+            return;
 
+        }
+
+        numerosSorteados.push(numero);
+        let elemento = elementos_quimicos[numero -1];
         estadoJogo.textContent = `${letter} - ${numero}`;
         const numeroSorteado = document.querySelector(`.numero.num-${numero}`);
+        elementoSorteado.textContent = `${elemento}`;
         if (numeroSorteado) {
             numeroSorteado.classList.add('sorteado');
         }
     }
 };
 
+const generateUniqueNumber = function() {
+    let numero;
+    do {
+      numero = Math.floor(Math.random() * maxNumber) + 1;
+    } while (numerosSorteados.includes(numero));
+    return numero;
+  };
+
 btnSortear.forEach(btn => btn.addEventListener('click', sortear));
+
+const elementos_quimicos = [
+    "Hidrogênio",
+    "Hélio",
+    "Lítio",
+    "Berílio",
+    "Boro",
+    "Carbono",
+    "Nitrogênio",
+    "Oxigênio",
+    "Flúor",
+    "Neônio",
+    "Sódio",
+    "Magnésio",
+    "Alumínio",
+    "Silício",
+    "Fósforo",
+    "Enxofre",
+    "Cloro",
+    "Argônio",
+    "Potássio",
+    "Cálcio",
+    "Escândio",
+    "Titânio",
+    "Vanádio",
+    "Cromo",
+    "Manganês",
+    "Ferro",
+    "Cobalto",
+    "Níquel",
+    "Cobre",
+    "Zinco",
+    "Gálio",
+    "Germânio",
+    "Arsênio",
+    "Selênio",
+    "Bromo",
+    "Criptônio",
+    "Rubídio",
+    "Estrôncio",
+    "Ítrio",
+    "Zircônio",
+    "Nióbio",
+    "Molibdênio",
+    "Tecnécio",
+    "Rutênio",
+    "Ródio",
+    "Paládio",
+    "Prata",
+    "Cádmio",
+    "Índio",
+    "Estanho",
+    "Antimônio",
+    "Telúrio",
+    "Iodo",
+    "Xenônio",
+    "Césio",
+    "Bário",
+    "Lantânio",
+    "Cério",
+    "Praseodímio",
+    "Neodímio",
+    "Promécio",
+    "Samário",
+    "Európio",
+    "Gadolínio",
+    "Térbio",
+    "Disprósio",
+    "Hólmio",
+    "Érbio",
+    "Túlio",
+    "Itérbio",
+    "Lutécio",
+    "Háfnio",
+    "Tântalo",
+    "Tungstênio",
+    "Rênio",
+    "Ósmio",
+    "Irídio",
+    "Platina",
+    "Ouro",
+    "Mercúrio",
+    "Tálio",
+    "Chumbo",
+    "Bismuto",
+    "Polônio",
+    "Ástato",
+    "Rádon",
+    "Frâncio",
+    "Rádio",
+    "Actínio",
+    "Tório",
+    "Protactínio",
+    "Urânio",
+    "Neptúnio",
+    "Plutônio",
+    "Amerício",
+    "Cúrio",
+    "Berquélio",
+    "Califórnio",
+    "Einstênio",
+    "Férmio",
+    "Mendelévio",
+    "Nobélio",
+    "Laurêncio",
+    "Rutherfórdio",
+    "Dúbnio",
+    "Seabórgio",
+    "Bóhrio",
+    "Hássio",
+    "Meitnério",
+    "Darmstádio",
+    "Roentgênio",
+    "Copernício",
+    "Nihônio",
+    "Fleróvio",
+    "Moscóvio",
+    "Livermório",
+    "Tenessino",
+    "Ogânio"
+    ]
+    

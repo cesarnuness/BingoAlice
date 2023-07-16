@@ -33,7 +33,7 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: auto;
   height: 100%;
   margin-left: 5px;
 }
@@ -68,6 +68,16 @@ body {
   color: #333;
   padding: 10px;
 }
+
+.elementoSorteado {
+      grid-column: span 5;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+  }
 
 .sortear {
   grid-column: span 5;
@@ -125,6 +135,22 @@ body {
 
   .numero {
     font-size: 18px;
+  }
+  .navbar {
+    height: 30px;
+  }
+  .navbar > button {
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .navbar > .sortear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    font-size: 10px;
+    margin-left: 50px;
   }
 }
 
