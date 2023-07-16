@@ -59,7 +59,8 @@ body {
   background-color: #686868;
 }
 
-.estadoJogo {
+.estadoJogo,
+.elementoSorteado {
   grid-column: span 5;
   margin-left: auto;
   margin-right: auto;
@@ -68,16 +69,6 @@ body {
   color: #333;
   padding: 10px;
 }
-
-.elementoSorteado {
-      grid-column: span 5;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    padding: 10px;
-  }
 
 .sortear {
   grid-column: span 5;
@@ -102,7 +93,6 @@ body {
   background-color: #e64a19; /* Darken Deep Orange */
 }
 
-
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -126,40 +116,6 @@ body {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .numero {
-    font-size: 18px;
-  }
-  .navbar {
-    height: 35px;
-
-  }
-  .navbar > button {
-    height: 20px;
-    font-size: 12px;
-  }
-
-  .navbar > .sortear {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20px;
-    font-size: 10px;
-    margin-left: 50px;
-  }
-  .estadoJogo {
-    font-size: 18px;
-  }
-
-  .elementoSorteado {
-    font-size: 14px;
-  }
 }
 
 .b {
@@ -188,5 +144,119 @@ body {
 }
 
 .sorteado {
-  background-color: #FBD85D ;
+  background-color: #FBD85D;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content span {
+  margin-right: 10px;
+}
+
+.footer-content a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #007bff;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal h1 {
+  margin-bottom: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .numero {
+    font-size: 18px;
+  }
+
+  .navbar {
+    height: 35px;
+  }
+
+  .navbar > button {
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .navbar > .sortear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    font-size: 10px;
+    margin-left: 50px;
+  }
+
+  .estadoJogo {
+    font-size: 18px;
+  }
+
+  .elementoSorteado {
+    font-size: 14px;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 3rem;
+  }
+
+  .modal h1 {
+    margin-bottom: 15px;
+  }
 }
