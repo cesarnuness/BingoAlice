@@ -1,178 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>::Bingo Químico:: ETEC Cabrália Paulista ::</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.png" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>::Bingo de Química:: ETEC Cabrália Paulista</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
     <div class="navbar">
-        <img src="./Logo.png" alt="Logo" class="logo">
-        <div style="flex-grow: 1;"></div>
+      <img src="./Logo.png" alt="Logo" class="logo" />
+      <div style="flex-grow: 1"></div>
 
-        <button class="button sortear">SORTEAR</button>
-        <button class="button reset"><i class="fa-solid fa-rotate-right"></i></button>
-        <button class="button info show-modal"><i class="fa-solid fa-circle-info"></i></button>
+      <button class="button sortear">SORTEAR</button>
+      <button class="button reset"><i class="fa-solid fa-rotate-right"></i></button>
+      <button class="button info show-modal"><i class="fa-solid fa-circle-info"></i></button>
     </div>
     <div class="modal hidden">
-        <button class="close-modal">&times;</button>
-        <h1>Bingo dos Elementos Químicos</h1>
-        <p>
-            O "Bingo dos Elementos Químicos" é uma ferramenta divertida e educativa criada por César Nunes à pedido da Profa. Alice Nunes Garbúlio. 
-            O objetivo deste site é auxiliar os alunos no aprendizado da química, oferecendo uma maneira interativa de revisar os elementos químicos, explorar suas propriedades e testar seus conhecimentos.
-            Através do jogo de bingo, você pode aprender sobre os elementos, suas características e suas posições na tabela periódica, tornando o estudo da química mais envolvente e divertido.
-            Divirta-se jogando e aprimore seus conhecimentos sobre os elementos químicos!
-        </p>
-      </div>
-      <div class="overlay hidden"></div>
-    
-    <div class="container">
-        <div class="estadoJogo">Novo Jogo</div>
-        <div class="elementoSorteado">Bem vindo ao Bingo dos Elementos Químicos</div>
-        <div class="numero b">B</div>
-        <div class="numero i">I</div>
-        <div class="numero n">N</div>
-        <div class="numero g">G</div>
-        <div class="numero o">O</div>
-        <div class="numero num-1">1</div>
-        <div class="numero num-2">2</div>
-        <div class="numero num-3">3</div>
-        <div class="numero num-4">4</div>
-        <div class="numero num-5">5</div>
-        <div class="numero num-6">6</div>
-        <div class="numero num-7">7</div>
-        <div class="numero num-8">8</div>
-        <div class="numero num-9">9</div>
-        <div class="numero num-10">10</div>
-        <div class="numero num-11">11</div>
-        <div class="numero num-12">12</div>
-        <div class="numero num-13">13</div>
-        <div class="numero num-14">14</div>
-        <div class="numero num-15">15</div>
-        <div class="numero num-16">16</div>
-        <div class="numero num-17">17</div>
-        <div class="numero num-18">18</div>
-        <div class="numero num-19">19</div>
-        <div class="numero num-20">20</div>
-        <div class="numero num-21">21</div>
-        <div class="numero num-22">22</div>
-        <div class="numero num-23">23</div>
-        <div class="numero num-24">24</div>
-        <div class="numero num-25">25</div>
-        <div class="numero num-26">26</div>
-        <div class="numero num-27">27</div>
-        <div class="numero num-28">28</div>
-        <div class="numero num-29">29</div>
-        <div class="numero num-30">30</div>
-        <div class="numero num-31">31</div>
-        <div class="numero num-32">32</div>
-        <div class="numero num-33">33</div>
-        <div class="numero num-34">34</div>
-        <div class="numero num-35">35</div>
-        <div class="numero num-36">36</div>
-        <div class="numero num-37">37</div>
-        <div class="numero num-38">38</div>
-        <div class="numero num-39">39</div>
-        <div class="numero num-40">40</div>
-        <div class="numero num-41">41</div>
-        <div class="numero num-42">42</div>
-        <div class="numero num-43">43</div>
-        <div class="numero num-44">44</div>
-        <div class="numero num-45">45</div>
-        <div class="numero num-46">46</div>
-        <div class="numero num-47">47</div>
-        <div class="numero num-48">48</div>
-        <div class="numero num-49">49</div>
-        <div class="numero num-50">50</div>
-        <div class="numero num-51">51</div>
-        <div class="numero num-52">52</div>
-        <div class="numero num-53">53</div>
-        <div class="numero num-54">54</div>
-        <div class="numero num-55">55</div>
-        <div class="numero num-56">56</div>
-        <div class="numero num-57">57</div>
-        <div class="numero num-58">58</div>
-        <div class="numero num-59">59</div>
-        <div class="numero num-60">60</div>
-        <div class="numero num-61">61</div>
-        <div class="numero num-62">62</div>
-        <div class="numero num-63">63</div>
-        <div class="numero num-64">64</div>
-        <div class="numero num-65">65</div>
-        <div class="numero num-66">66</div>
-        <div class="numero num-67">67</div>
-        <div class="numero num-68">68</div>
-        <div class="numero num-69">69</div>
-        <div class="numero num-70">70</div>
-        <div class="numero num-71">71</div>
-        <div class="numero num-72">72</div>
-        <div class="numero num-73">73</div>
-        <div class="numero num-74">74</div>
-        <div class="numero num-75">75</div>
-        <div class="numero num-76">76</div>
-        <div class="numero num-77">77</div>
-        <div class="numero num-78">78</div>
-        <div class="numero num-79">79</div>
-        <div class="numero num-80">80</div>
-        <div class="numero num-81">81</div>
-        <div class="numero num-82">82</div>
-        <div class="numero num-83">83</div>
-        <div class="numero num-84">84</div>
-        <div class="numero num-85">85</div>
-        <div class="numero num-86">86</div>
-        <div class="numero num-87">87</div>
-        <div class="numero num-88">88</div>
-        <div class="numero num-89">89</div>
-        <div class="numero num-90">90</div>
-        <div class="numero num-91">91</div>
-        <div class="numero num-92">92</div>
-        <div class="numero num-93">93</div>
-        <div class="numero num-94">94</div>
-        <div class="numero num-95">95</div>
-        <div class="numero num-96">96</div>
-        <div class="numero num-97">97</div>
-        <div class="numero num-98">98</div>
-        <div class="numero num-99">99</div>
-        <div class="numero num-100">100</div>
-        <div class="numero num-101">101</div>
-        <div class="numero num-102">102</div>
-        <div class="numero num-103">103</div>
-        <div class="numero num-104">104</div>
-        <div class="numero num-105">105</div>
-        <div class="numero num-106">106</div>
-        <div class="numero num-107">107</div>
-        <div class="numero num-108">108</div>
-        <div class="numero num-109">109</div>
-        <div class="numero num-110">110</div>
-        <div class="numero num-111">111</div>
-        <div class="numero num-112">112</div>
-        <div class="numero num-113">113</div>
-        <div class="numero num-114">114</div>
-        <div class="numero num-115">115</div>
-        <div class="numero num-116">116</div>
-        <div class="numero num-117">117</div>
-        <div class="numero num-118">118</div>
-        <div class="numero"></div>
-        <div class="numero"></div>
-        <button class="button sortear">SORTEAR</button>
+      <button class="close-modal">&times;</button>
+      <h1>Bingo dos Elementos Químicos</h1>
+      <p>
+        O "Bingo dos Elementos Químicos" é uma ferramenta divertida e educativa criada por César Nunes à pedido da Profa. Alice Nunes Garbúlio. O objetivo deste
+        site é auxiliar os alunos no aprendizado da química, oferecendo uma maneira interativa de revisar os elementos químicos, explorar suas propriedades e
+        testar seus conhecimentos. Através do jogo de bingo, você pode aprender sobre os elementos, suas características e suas posições na tabela periódica,
+        tornando o estudo da química mais envolvente e divertido. Divirta-se jogando e aprimore seus conhecimentos sobre os elementos químicos!
+      </p>
     </div>
+    <div class="overlay hidden"></div>
+
+    <div class="container">
+      <div class="estadoJogo">Novo Jogo</div>
+      <div class="elementoSorteado">Bem vindo ao Bingo dos Elementos Químicos</div>
+      <div class="numero num-1">1</div>
+      <div class="numero num-2">2</div>
+      <div class="numero num-3">3</div>
+      <div class="numero num-4">4</div>
+      <div class="numero num-5">5</div>
+      <div class="numero num-6">6</div>
+      <div class="numero num-7">7</div>
+      <div class="numero num-8">8</div>
+      <div class="numero num-9">9</div>
+      <div class="numero num-10">10</div>
+      <div class="numero num-11">11</div>
+      <div class="numero num-12">12</div>
+      <div class="numero num-13">13</div>
+      <div class="numero num-14">14</div>
+      <div class="numero num-15">15</div>
+      <div class="numero num-16">16</div>
+      <div class="numero num-17">17</div>
+      <div class="numero num-18">18</div>
+      <div class="numero num-19">19</div>
+      <div class="numero num-20">20</div>
+      <div class="numero num-21">21</div>
+      <div class="numero num-22">22</div>
+      <div class="numero num-23">23</div>
+      <div class="numero num-24">24</div>
+      <div class="numero num-25">25</div>
+      <div class="numero num-26">26</div>
+      <div class="numero num-27">27</div>
+      <div class="numero num-28">28</div>
+      <div class="numero num-29">29</div>
+      <div class="numero num-30">30</div>
+      <div class="numero num-31">31</div>
+      <div class="numero num-32">32</div>
+      <div class="numero num-33">33</div>
+      <div class="numero num-34">34</div>
+      <div class="numero num-35">35</div>
+      <div class="numero num-36">36</div>
+      <div class="numero num-37">37</div>
+      <div class="numero num-38">38</div>
+      <div class="numero num-39">39</div>
+      <div class="numero num-40">40</div>
+      <div class="numero num-41">41</div>
+      <div class="numero num-42">42</div>
+      <div class="numero num-43">43</div>
+      <div class="numero num-44">44</div>
+      <div class="numero num-45">45</div>
+      <div class="numero num-46">46</div>
+      <div class="numero num-47">47</div>
+      <div class="numero num-48">48</div>
+      <div class="numero num-49">49</div>
+      <div class="numero num-50">50</div>
+      <div class="numero num-51">51</div>
+      <div class="numero num-52">52</div>
+      <div class="numero num-53">53</div>
+      <div class="numero num-54">54</div>
+      <div class="numero num-55">55</div>
+      <div class="numero num-56">56</div>
+      <div class="numero num-57">57</div>
+      <div class="numero num-58">58</div>
+      <div class="numero num-59">59</div>
+      <div class="numero num-60">60</div>
+      <div class="numero num-61">61</div>
+      <div class="numero num-62">62</div>
+      <div class="numero num-63">63</div>
+      <div class="numero num-64">64</div>
+      <div class="numero num-65">65</div>
+      <div class="numero num-66">66</div>
+      <div class="numero num-67">67</div>
+      <div class="numero num-68">68</div>
+      <div class="numero num-69">69</div>
+      <div class="numero num-70">70</div>
+      <div class="numero num-71">71</div>
+      <div class="numero num-72">72</div>
+      <div class="numero num-73">73</div>
+      <div class="numero num-74">74</div>
+      <div class="numero num-75">75</div>
+      <div class="numero num-76">76</div>
+      <div class="numero num-77">77</div>
+      <div class="numero num-78">78</div>
+      <div class="numero num-79">79</div>
+      <div class="numero num-80">80</div>
+      <div class="numero num-81">81</div>
+      <div class="numero num-82">82</div>
+      <div class="numero num-83">83</div>
+      <div class="numero num-84">84</div>
+      <div class="numero num-85">85</div>
+      <div class="numero num-86">86</div>
+      <div class="numero num-87">87</div>
+      <div class="numero num-88">88</div>
+      <div class="numero num-89">89</div>
+      <div class="numero num-90">90</div>
+      <div class="numero num-91">91</div>
+      <div class="numero num-92">92</div>
+      <div class="numero num-93">93</div>
+      <div class="numero num-94">94</div>
+      <div class="numero num-95">95</div>
+      <div class="numero num-96">96</div>
+      <div class="numero num-97">97</div>
+      <div class="numero num-98">98</div>
+      <div class="numero num-99">99</div>
+      <div class="numero num-100">100</div>
+      <div class="numero num-101">101</div>
+      <div class="numero num-102">102</div>
+      <div class="numero num-103">103</div>
+      <div class="numero num-104">104</div>
+      <div class="numero num-105">105</div>
+      <div class="numero num-106">106</div>
+      <div class="numero num-107">107</div>
+      <div class="numero num-108">108</div>
+      <div class="numero num-109">109</div>
+      <div class="numero num-110">110</div>
+      <div class="numero num-111">111</div>
+      <div class="numero num-112">112</div>
+      <div class="numero num-113">113</div>
+      <div class="numero num-114">114</div>
+      <div class="numero num-115">115</div>
+      <div class="numero num-116">116</div>
+      <div class="numero num-117">117</div>
+      <div class="numero num-118">118</div>
+    </div>
+    <button class="button sortear">SORTEAR</button>
 
     <footer>
-        <div class="footer-content">
-            <span>&copy; 2023 Cesar Nunes</span>
-            <a href="https://github.com/cesarnuness" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
+      <div class="footer-content">
+        <span>&copy; 2023 Cesar Nunes</span>
+        <a href="https://github.com/cesarnuness" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
     </footer>
-    
-
-    <script type="module" src="main.js"></script>
-    <script type="module" src="https://kit.fontawesome.com/cf910c8290.js" crossorigin="anonymous"></script>
-</body>
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/cf910c8290.js" crossorigin="anonymous"></script>
+  </body>
 </html>
