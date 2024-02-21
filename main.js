@@ -1,5 +1,7 @@
 "use strict";
 
+//  trying to fix
+
 const resetarJogo = document.querySelector(".reset");
 const btnSortear = document.querySelectorAll(".sortear");
 const estadoJogo = document.querySelector(".estadoJogo");
